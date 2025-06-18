@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cobrança</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="card">
-        <h2><i class="fas fa-calculator"></i> Cobrança</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cobrança Integrado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="header">
+      <h1><i class="fas fa-file-invoice-dollar"></i> Sistema de Cobrança</h1>
+      <p>Preencha o formulário para gerar a cobrança e enviar via WhatsApp</p>
+    </div>
+    
+    <div class="form-container">
+      <h2><i class="fas fa-receipt"></i> Formulário de Cobrança</h2>
 
-        <label>Valor total:</label>
-        <input type="text" placeholder="R$ 0,00" />
+      <div class="form-group">
+        <label for="valorTotal"><i class="fas fa-money-bill-wave"></i> Valor total:</label>
+        <input type="text" id="valorTotal" placeholder="R$ 0,00">
+      </div>
 
-        <label>Valor do adiantamento</label>
-        <input type="text" placeholder="R$ 0,00" />
+      <div class="form-group" id="adiantamentoGroup">
+        <label for="valorAdiantamento"><i class="fas fa-hand-holding-usd"></i> Valor do adiantamento:</label>
+        <input type="text" id="valorAdiantamento" placeholder="R$ 0,00">
+      </div>
 
-        <label>Tipo de Material:</label>
-        <select>
-          <option value="bordado">Bordado</option>
-          <option value="etiprint">Etiprint</option>
-          <option value="nylon">Nylon</option>
-          <option value="metal">Metal</option>
-          <option value="cadarco">Cadarço</option>
-          <option value="termolight">Termolight</option>
-          <option value="dtf">DTF</option>
-          <option value="tag">Tag</option>
-          <option value="botao">Botão</option>
-          <option value="rebite">Rebite</option>
+      <div class="form-group">
+        <label for="material"><i class="fas fa-tshirt"></i> Tipo de Material:</label>
+        <select id="material">
+          <option value="Bordada">🧵 Bordada</option>
+          <option value="Metal">🪙 Metal</option>
+          <option value="Elprint">🖨️ Elprint</option>
+          <option value="Nylon">🎒 Nylon</option>
+          <option value="Tag">📁 Tag</option>
+          <option value="Botão">🔘 Botão</option>
+          <option value="Rebite">📌 Rebite</option>
+          <option value="Cadarço">👟 Cadarço</option>
+          <option value="DTF">🖼️ DTF</option>
+          <option value="Termoligth">🔥 Termoligth</option>
         </select>
+      </div>
 
-        <div class="parcelas-section">
-          <label>Parcelas 3x</label>
-          <div class="parcelas">
-            <input type="text" placeholder="R$ 0,00" />
-            <input type="text" placeholder="R$ 0,00" />
-            <input type="text" placeholder="R$ 0,00" />
-            <div class="icons">
-              <input type="checkbox" id="avista" />
-              <label for="avista">à vista</label>
-              <i class="fas fa-calendar-alt"></i>
-            </div>
-          </div>
+      <div class="form-group">
+        <label><i class="fas fa-credit-card"></i> Forma de pagamento:</label>
+        <div class="radio-options">
+          <label><input type="radio" name="pagamento" value="avista" checked> à vista</label>
+          <label><input type="radio" name="pagamento" value="parcelado"> Parcelado</label>
         </div>
 
-        <label>Whatsapp</label>
-        <div class="whatsapp">
-          <input type="text" placeholder="+55 00 0 0000-0000" />
-          <i class="fab fa-whatsapp"></i>
-        </div>
-        <div class="button-section">
-          <button>Enviar</button>
+        <div class="parcelado-options" id="parcelado-options">
+          <label for="parcelas"><i class="fas fa-calendar-alt"></i> Quantidade de parcelas:</label>
+          <input type="number" id="parcelas" min="1" max="12" placeholder="Ex: 3">
+
+          <label for="dataInicial"><i class="fas fa-calendar-day"></i> Data da primeira parcela:</label>
+          <input type="date" id="dataInicial">
+
+          <div class="parcelas-geradas" id="parcelasGeradas"></div>
         </div>
       </div>
+
+      <div class="form-group">
+        <label for="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</label>
+        <input type="text" id="whatsapp" placeholder="(00) 00000-0000">
+      </div>
+
+      <button class="submit-button" onclick="gerarMensagem()">
+        <i class="fas fa-paper-plane"></i> Gerar Mensagem
+      </button>
+      
+      <a id="whatsappButton" class="whatsapp-link" target="_blank">
+        <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+      </a>
+
+      <div class="mensagem-final" id="mensagemFinal"></div>
     </div>
-  </body>
+  </div>
+<script src="script.js"></script>
+</body>
 </html>
