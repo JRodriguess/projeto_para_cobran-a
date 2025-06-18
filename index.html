@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cobrança</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <div class="container">
-    <div class="card">
-      <h2><i class="fas fa-calculator"></i> Cobrança</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cobrança</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2><i class="fas fa-calculator"></i> Cobrança</h2>
 
-      <label>Valor total:</label>
-      <input type="text" placeholder="R$ 0,00">
+        <label>Valor total:</label>
+        <input type="text" placeholder="R$ 0,00" />
 
-      <label>Valor do adiantamento</label>
-      <input type="text" placeholder="R$ 0,00">
+        <label>Valor do adiantamento</label>
+        <input type="text" placeholder="R$ 0,00" />
 
-      <label>Tipo de Material:</label>
-      <select>
-        <option>Bordada</option>
-        <option>Sublimada</option>
-        <option>Silk</option>
-      </select>
+        <label>Tipo de Material:</label>
+        <select>
+          <option value="bordado">Bordado</option>
+          <option value="etiprint">Etiprint</option>
+          <option value="nylon">Nylon</option>
+          <option value="metal">Metal</option>
+          <option value="cadarco">Cadarço</option>
+          <option value="termolight">Termolight</option>
+          <option value="dtf">DTF</option>
+          <option value="tag">Tag</option>
+          <option value="botao">Botão</option>
+          <option value="rebite">Rebite</option>
+        </select>
 
-      <div class="parcelas-section">
-        <label>Parcelas 3x</label>
-        <div class="parcelas">
-          <input type="text" placeholder="R$ 0,00">
-          <input type="text" placeholder="R$ 0,00">
-          <input type="text" placeholder="R$ 0,00">
-          <div class="icons">
-            <input type="checkbox" id="avista">
-            <label for="avista">à vista</label>
-            <i class="fas fa-calendar-alt"></i>
+        <div class="parcelas-section">
+          <label>Parcelas 3x</label>
+          <div class="parcelas">
+            <input type="text" placeholder="R$ 0,00" />
+            <input type="text" placeholder="R$ 0,00" />
+            <input type="text" placeholder="R$ 0,00" />
+            <div class="icons">
+              <input type="checkbox" id="avista" />
+              <label for="avista">à vista</label>
+              <i class="fas fa-calendar-alt"></i>
+            </div>
           </div>
         </div>
-      </div>
 
-      <label>Whatsapp</label>
-      <div class="whatsapp">
-        <input type="text" placeholder="+55 00 0 0000-0000">
-        <i class="fab fa-whatsapp"></i>
-      </div>
-      <div class="button-section">
-        <button>Enviar</button>
+        <label>Whatsapp</label>
+        <div class="whatsapp">
+          <input type="text" placeholder="+55 00 0 0000-0000" />
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="button-section">
+          <button>Enviar</button>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

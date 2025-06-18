@@ -111,3 +111,6 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+label {
+  margin-bottom: 8px;
+}
