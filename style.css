@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #002b45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Adicione esta linha se quiser empilhar elementos verticalmente */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+
+  background-color: #0d0616;
+  padding: 30px;
+  border-radius: 15px;
+  width: 500px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 33px;
+  }
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1227;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+select {
+  appearance: none;
+}
+
+.parcelas {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.parcelas input {
+  flex: 1;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp input {
+  flex: 1;
+}
+.icons img {
+  width: 20px;
+  height: 20px;
+}
+button {
+  width: 70px;
+  height: 45px;
+  padding: 10px;
+  background-color: #00d827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  align-self: center; /* Garante centralização se estiver em um flex container */
+}
+
+button:hover {
+  background-color: #00c024;
+}
+.button-section {
+  display: flex;
+  justify-content: center;
+}
